@@ -39,6 +39,7 @@ x402 is an emerging open standard from the Coinbase ecosystem focused on safer, 
 - [Hedera and the x402 Payment Standard](https://hedera.com/blog/hedera-and-the-x402-payment-standard/) - Hedera ecosystem overview of x402-style programmable payments for applications and AI agents.
 - [CardZero](https://cardzero.ai) - Smart-contract wallet (ERC-4337) for AI agents on Base mainnet, USDC. Buyer-side x402 support via `POST /v1/x402/pay`. Owner-controlled spending rules (per-tx limit, daily cap, whitelist, freeze) enforced on-chain. Also runs first known production deployment of ERC-8004 + ERC-8183.
 
+- [TWZRD Agent Intel](https://intel.twzrd.xyz) - Solana-native x402 MCP for agent trust scoring. Free preflight checks score any Solana wallet (on-chain activity, recurring patterns, network age); paid calls return signed `twzrd.receipt.v5` trust tokens. <1s settlement on Solana. MCP Registry: `xyz.twzrd.intel/twzrd-agent-intel`. ([MCP](https://intel.twzrd.xyz/mcp)) ([GitHub](https://github.com/twzrd-sol/wzrd-final))
 ### Facilitators & Networks
 - [Coinbase Hosted Facilitator (Base)](https://docs.cdp.coinbase.com/x402#offload-your-infra)
 - [Supported Networks](https://docs.cdp.coinbase.com/get-started/supported-networks#x402)
