@@ -146,6 +146,8 @@ x402 is an emerging open standard from the Coinbase ecosystem focused on safer, 
 - [x402 FAQ – Security](https://docs.cdp.coinbase.com/x402/support/faq#security)
 - [Compliance-Aware Agentic Payments on Stablecoin Rails](https://arxiv.org/abs/2605.00071) - Research paper on policy and compliance guardrails for x402-style stablecoin payment authorization.
 
+- [TWZRD Agent Intelligence](https://intel.twzrd.xyz) — Pre-settlement trust preflight for x402 on Solana. Score any seller wallet before paying: free `POST /v1/intel/preflight` returns a ReadinessCard with `decision=block|warn|allow`, trust score, and `on_before_settle` hook guidance. 42k-event Solana x402 corpus. MCP server at `/mcp` (16 tools). [`pip install twzrd-agent-intel`](https://pypi.org/project/twzrd-agent-intel/) · [npm verifier](https://www.npmjs.com/package/twzrd-receipt-verifier).
+
 ### Benchmarks & Analysis
 - [Dev.to – x402 vs Traditional Payments (Micropayments)](https://dev.to/pathak_prakarsh/x402-finally-payments-built-for-the-internet-not-bolted-onto-it-1058)
 
