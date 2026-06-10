@@ -39,7 +39,6 @@ x402 is an emerging open standard from the Coinbase ecosystem focused on safer, 
 - [Hedera and the x402 Payment Standard](https://hedera.com/blog/hedera-and-the-x402-payment-standard/) - Hedera ecosystem overview of x402-style programmable payments for applications and AI agents.
 - [CardZero](https://cardzero.ai) - Smart-contract wallet (ERC-4337) for AI agents on Base mainnet, USDC. Buyer-side x402 support via `POST /v1/x402/pay`. Owner-controlled spending rules (per-tx limit, daily cap, whitelist, freeze) enforced on-chain. Also runs first known production deployment of ERC-8004 + ERC-8183.
 
-- [TWZRD Agent Intel](https://intel.twzrd.xyz) - Solana-native x402 MCP for agent trust scoring. Free preflight checks score any Solana wallet (on-chain activity, recurring patterns, network age); paid calls return signed `twzrd.receipt.v5` trust tokens. <1s settlement on Solana. MCP Registry: `xyz.twzrd.intel/twzrd-agent-intel`. ([MCP](https://intel.twzrd.xyz/mcp)) ([GitHub](https://intel.twzrd.xyz))
 ### Facilitators & Networks
 - [Coinbase Hosted Facilitator (Base)](https://docs.cdp.coinbase.com/x402#offload-your-infra)
 - [Supported Networks](https://docs.cdp.coinbase.com/get-started/supported-networks#x402)
@@ -146,7 +145,7 @@ x402 is an emerging open standard from the Coinbase ecosystem focused on safer, 
 - [x402 FAQ – Security](https://docs.cdp.coinbase.com/x402/support/faq#security)
 - [Compliance-Aware Agentic Payments on Stablecoin Rails](https://arxiv.org/abs/2605.00071) - Research paper on policy and compliance guardrails for x402-style stablecoin payment authorization.
 
-- [TWZRD Agent Intelligence](https://intel.twzrd.xyz) — Pre-settlement trust preflight for x402 on Solana. Score any seller wallet before paying: free `POST /v1/intel/preflight` returns a ReadinessCard with `decision=block|warn|allow`, trust score, and `on_before_settle` hook guidance. 42k-event Solana x402 corpus. MCP server at `/mcp` (16 tools). [`pip install twzrd-agent-intel`](https://pypi.org/project/twzrd-agent-intel/) · [npm verifier](https://www.npmjs.com/package/twzrd-receipt-verifier).
+- [TWZRD Agent Intel](https://intel.twzrd.xyz) — Pre-settlement trust preflight for x402 on Solana. Vet a seller wallet before your agent pays: free `POST /v1/intel/preflight` returns a ReadinessCard (`decision: block|warn|allow` + trust score and caveats); paid ($0.05 USDC, gas-less — sponsor co-signs) `GET /v1/intel/trust/{wallet}` returns a portable signed `twzrd.receipt.v5` you can verify offline. MCP server at [`/mcp`](https://intel.twzrd.xyz/mcp) (17 tools, registry `xyz.twzrd.intel/twzrd-agent-intel`). [`pip install twzrd-agent-intel`](https://pypi.org/project/twzrd-agent-intel/) · [`@wzrd_sol/sdk`](https://www.npmjs.com/package/@wzrd_sol/sdk) (`preSpendGate`) · [receipt verifier](https://www.npmjs.com/package/twzrd-receipt-verifier)
 
 ### Benchmarks & Analysis
 - [Dev.to – x402 vs Traditional Payments (Micropayments)](https://dev.to/pathak_prakarsh/x402-finally-payments-built-for-the-internet-not-bolted-onto-it-1058)
